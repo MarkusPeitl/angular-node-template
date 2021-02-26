@@ -1,0 +1,1 @@
+Put typescript models you want to use both in Angular as well as in Node, here

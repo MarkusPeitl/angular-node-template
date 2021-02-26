@@ -1,0 +1,40 @@
+{
+  "name": "@myapplication/builder",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "node sharedcopy && npm-run-all -p -l servernocopy clientnocopy",
+    "preinstall": "cd server && npm install && cd ../client && npm install",
+    "clientnocopy": "cd client && npm start",
+    "servernocopy": "cd server && npm start",
+    "client": "node sharedcopy && cd client && npm start",
+    "server": "node sharedcopy && cd server && npm start",
+    "lint-fix": "tslint -c ./tslint.json --fix --force sharedmodels/**/*.ts -t verbose && node sharedcopy && tslint -c ./tslint.json --fix --force server/src/**/*.ts --exclude server/src@pmm/portablemodule/lib/**/*.ts -t verbose && tslint -c ./tslint.json --fix --force client/src/**/*.ts --exclude client/src/app/edit-mind-map-module@pmm/portablemodule/lib/**/*.ts -t verbose",
+    "prod:install": "npm install --production && cd server && npm run prod:install && cd ../client && npm run prod:install",
+    "prod:build": "node sharedcopy && cd server && npm run prod:build && cd ../client && npm run prod:build",
+    "prod:start": "cd server && npm run prod:start",
+    "prod:rebuild-start": "npm-run-all -s prod:install prod:build prod:start"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/uuid": "^3.4.5",
+    "@typescript-eslint/eslint-plugin": "^4.15.0",
+    "@typescript-eslint/eslint-plugin-tslint": "^4.15.0",
+    "@typescript-eslint/parser": "^4.15.0",
+    "copyfiles": "^2.1.1",
+    "eslint": "^7.19.0",
+    "eslint-config-prettier": "^7.2.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsdoc": "^31.6.1",
+    "eslint-plugin-prefer-arrow": "^1.2.3",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.2.1",
+    "prettier-eslint": "^12.0.0",
+    "typescript": "^3.6.3"
+  },
+  "dependencies": {
+    "path": "^0.12.7",
+    "util": "^0.12.1"
+  }
+}

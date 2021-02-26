@@ -1,0 +1,23 @@
+{
+  "name": "@myapplication/portablemodule",
+  "version": "0.2.0",
+  "description": "Portable typescript based models and services to be used in commonjs compatible environments",
+  "scripts": {
+    "build": "tsc",
+    "build-watch": "tsc -w",
+    "clean": "sudo rm -r node_modules && sudo rm package-lock.json",
+    "start": "npm run build-watch"
+  },
+  "author": "Markus Peitl",
+  "license": "Apache-2.0",
+  "type": "module",
+  "files": [
+    "lib/*"
+  ],
+  "dependencies": {
+    "rxjs": "^6.6.3"
+  },
+  "devDependencies": {
+    "typescript": "^4.1.3"
+  }
+}

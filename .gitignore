@@ -1,0 +1,13 @@
+node_modules
+dist
+node_modules
+*/node_modules
+lib
+dist
+client/src/app/edit-mind-map-module@pmm/portablemodule/lib
+server/projects
+server/src@pmm/portablemodule/lib
+
+.vscode/*
+.vscode/launch.json
+.vscode/tasks.json

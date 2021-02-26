@@ -1,0 +1,13 @@
+{
+  "verbose": false,
+  "ignore": [
+    "**.json",
+    "data/**",
+    "data/User",
+    "data/User/*",
+    "data/**/*.json",
+    "**.map",
+    "**test.json"
+  ],
+  "ext": ".json,.map"
+}

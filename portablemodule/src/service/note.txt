@@ -1,0 +1,7 @@
+Put services that you want to use in both Angular and Nodejs here.
+If some of the models you use have platform specific feature and you still want to share the services using this models,
+then:
+1. Create an interface for the model you want to use in this commonmodule
+2. Put the service in this modules and use the interface to type the models you want to use
+3. Create a model on the platform you want to user that inherits from the interface (PlatformModel implements ICommonModel)
+4. During runtime you then can use the service with the instances of the platform specific models interchangably
